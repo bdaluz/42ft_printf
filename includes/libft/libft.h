@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 10:48:57 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/12 15:57:04 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 19:16:18 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_putchar(char c);
 int		ft_putstr(char *c);
 int		ft_putnbr(long n);
+int		ft_puthex(unsigned int n, char format);
+int		ft_putnbr_unsigned(unsigned int n);
 
 #endif
