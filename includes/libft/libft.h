@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 10:48:57 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/10 12:53:05 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 15:57:04 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_putchar(char c);
 int		ft_putstr(char *c);
+int		ft_putnbr(long n);
 
 #endif
