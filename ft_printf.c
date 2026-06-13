@@ -6,13 +6,13 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:50:37 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/12 20:32:57 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 22:44:49 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_formatter(char c, va_list *ap)
+static int	ft_formatter(char c, va_list *ap)
 {
 	if (c == 'c')
 		return (ft_putchar((char)va_arg(*ap, int)));

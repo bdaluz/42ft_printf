@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 15:55:45 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/12 20:54:35 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 21:51:27 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 int	ft_putptr(void *ptr)
 {
 	int		count;
-	int		verify;
+	int		ret;
 
 	if (!ptr)
 		return (ft_putstr("(nil)"));
 	count = ft_putstr("0x");
 	if (count == -1)
 		return (-1);
-	verify = ft_puthex_long((unsigned long)ptr, 'x');
-	if (verify == -1)
+	ret = ft_puthex_long((unsigned long)ptr, 'x');
+	if (ret == -1)
 		return (-1);
-	count += verify;
-	return (count);
+	return (count + ret);
 }

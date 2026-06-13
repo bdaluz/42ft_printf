@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:51:33 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/10 13:14:42 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 22:40:32 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include "includes/libft/libft.h"
 # include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 int	ft_printf(const char *fmt, ...);
 
