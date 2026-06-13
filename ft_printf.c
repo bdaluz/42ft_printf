@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:50:37 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/12 19:16:54 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 20:32:57 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_formatter(char c, va_list *ap)
 		return (ft_putchar((char)va_arg(*ap, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(*ap, char *)));
+	else if (c == 'p')
+		return (ft_putptr((void *)va_arg(*ap, unsigned long)));
 	else if (c == 'd' || c == 'i')
 		return (ft_putnbr(va_arg(*ap, int)));
 	else if (c == 'u')

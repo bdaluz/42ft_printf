@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 10:48:57 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/12 19:16:18 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/12 20:43:39 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ int		ft_putstr(char *c);
 int		ft_putnbr(long n);
 int		ft_puthex(unsigned int n, char format);
 int		ft_putnbr_unsigned(unsigned int n);
+int		ft_putptr(void *ptr);
+int		ft_puthex_long(unsigned long n, char format);
 
 #endif
