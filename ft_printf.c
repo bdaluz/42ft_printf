@@ -6,7 +6,7 @@
 /*   By: bda-luz- <bda-luz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:50:37 by bda-luz-          #+#    #+#             */
-/*   Updated: 2026/06/12 22:44:49 by bda-luz-         ###   ########.fr       */
+/*   Updated: 2026/06/15 13:03:55 by bda-luz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,23 @@ int	ft_printf(const char *fmt, ...)
 {
 	va_list	ap;
 	int		count;
+	int		ret;
 
 	va_start(ap, fmt);
 	count = 0;
 	while (*fmt)
 	{
 		if (*fmt == '%')
-		{
-			count += ft_formatter(*(++fmt), &ap);
-			fmt++;
-		}
+			ret = ft_formatter(*(++fmt), &ap);
 		else
-			count += write(1, fmt++, 1);
+			ret = ft_putchar(*fmt);
+		if (ret == -1)
+		{
+			va_end(ap);
+			return (-1);
+		}
+		count += ret;
+		fmt++;
 	}
 	va_end(ap);
 	return (count);
